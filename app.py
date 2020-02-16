@@ -1,7 +1,9 @@
-from flask import Flask, render_template, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash
 from form import RegistrationForm, LoginForm
 from pymongo import MongoClient
 from passlib.hash import sha256_crypt
+import requests
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '0f728c6b5c9f6e02690f9496da4818ae'
@@ -22,6 +24,39 @@ def map():
 @app.route("/forgot")
 def forgot():
 	return render_template('forgot.html')
+
+@app.route("/admin")
+def admin():
+	return render_template('admin.html', title = 'Admin')
+
+@app.route("/admin", methods = ['POST'])
+def submitArticle():
+	text = request.form['text']
+	processed_text = text
+
+	client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
+	db = client.get_database('user_db')
+
+	article_db = db.articles
+
+	print(processed_text)
+
+	data = json.dumps({"text" : processed_text})
+
+	#data = '{"text": "Seven young men, armed with sharp weapons, went on the rampage in Nigdi on Friday night."}'
+
+	print(data)
+	#print(data2)
+
+	response = requests.post('http://localhost:5005/model/parse', data=data)
+
+	json_data = json.loads(response.text)
+
+	article_doc = {"article" : str(json_data)}
+
+	article_db.insert(article_doc)
+
+	return render_template('admin.html', title = 'Admin')
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
