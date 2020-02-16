@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, url_for, flash, ses
 from form import RegistrationForm, LoginForm
 from pymongo import MongoClient
 from passlib.hash import sha256_crypt
-import os
+from datetime import timedelta
 
 
 #def isLogIn():
@@ -11,6 +11,7 @@ import os
 
 app = Flask(__name__)
 app.secret_key = '0f728c6b5c9f6e02690f9496da4818ae'
+app.permanent_session_lifetime = timedelta(days = 1)
 
 @app.route("/")
 @app.route("/home")
@@ -36,10 +37,11 @@ def profile():
 
 @app.route("/logout")
 def logout():
-	session.pop('username', None)
-	session.pop('email', None)
-	flash('Logged out successfully!', 'success')
-	#logged_in = False
+	if 'username' in session and 'email' in session:
+		session.pop('username', None)
+		session.pop('email', None)
+		flash('Logged out successfully!', 'success')
+		#logged_in = False
 	return redirect(url_for('home'))
 
 @app.route("/map")
@@ -73,6 +75,7 @@ def login():
 					session['username'] = find_user[0]['username']
 					flash('Welcome ' + session['username'] + '!', 'success')
 					#logged_in = True
+					session.permanent = True
 					return redirect(url_for('map'))
 				else:
 					flash('Please enter the correct email or password', 'danger')
@@ -105,7 +108,8 @@ def register():
 				session['email'] = form.email.data
 				session['username'] = form.username.data
 				flash(f'Account created for {form.username.data}!', 'success')
-				logged_in = True
+				#logged_in = True
+				session.permanent = True
 				return redirect(url_for('map'))
 			elif len(dup_user) == 0:
 				flash(f'{form.email.data} is already in use', 'danger')
