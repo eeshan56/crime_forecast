@@ -79,17 +79,13 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-.map-container-3{
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height: 400px;
-  width: 400px;
+.logout{
+  background-color: white;
+  color: green;
+  border-radius: 10px;
 }
-.map-container-3 iframe{
-  left:0;
-  top:0;
-  height: 100%;
-  width: 100%;
-  position:absolute;
+
+.logout:hover{
+  background-color: white;
+  color: green;
 }

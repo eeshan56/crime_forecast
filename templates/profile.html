@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class = "content-section">
+		<legend class = "border-bottom mb-4"><center><h2>My Profile</h2></center></legend>
+		<div class="form-group">
+			<div class="form-control-label"><h5>Username: {{ session['username'] }}</h5></div>
+			<br>
+			<div class="form-control-label"><h5>Email: {{ session['email'] }}</h5></div>
+		</div>
+		<br>
+		<a href="{{ url_for('logout') }}"><input type="button" name="logout" class="btn btn-outline-info" value="Logout"></a>
+	</div>
+{% endblock content %}
