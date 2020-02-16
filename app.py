@@ -25,9 +25,12 @@ def profile():
 
 @app.route("/logout")
 def logout():
-	session.clear()
-	flash('Logged out successfully!', 'success')
-	return render_template('logout.html', title = 'Logout')
+	if 'username' in session and 'email' in session:
+		session.clear()
+		flash('Logged out successfully!', 'success')
+		return render_template('logout.html', title = 'Logout')
+	else:
+		return redirect(url_for('home'))
 
 @app.route("/map")
 def map():
@@ -43,6 +46,8 @@ def forgot():
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
+	if 'username' in session and 'email' in session:
+		return redirect(url_for('home'))
 	form = LoginForm()
 	if form.validate_on_submit():
 		client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
@@ -64,6 +69,8 @@ def login():
 
 @app.route("/register", methods = ['GET', 'POST'])
 def register():
+	if 'username' in session and 'email' in session:
+		return redirect(url_for('home'))
 	form = RegistrationForm()
 	if form.validate_on_submit():
 		client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
@@ -87,4 +94,4 @@ def register():
 	return render_template('register.html', title = 'Register', form = form)
 
 if __name__ == '__main__':
-	app.run(debug = True)
+	app.run(host = '0.0.0.0', debug = False)
