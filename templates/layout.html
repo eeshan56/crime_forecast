@@ -23,7 +23,14 @@
       			</button>
       			<div class="collapse navbar-collapse" id="navbarToggle">
         			<div class="navbar-nav mr-auto">
-          				<a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+        				{% if 'admin' in session %}
+          					<a class="nav-item nav-link" href="{{ url_for('ad_home') }}">Home</a>
+          				{% else %}
+          					<a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+          				{% endif %}
+          				{% if 'admin' in session %}
+          					<a class="nav-item nav-link" href="{{ url_for('ad_ner') }}">NER</a>
+          				{% endif %}
           				<a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
         			</div>
         <!-- Navbar Right Side -->
