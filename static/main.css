@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section {
-  background: #ffffff;
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
@@ -77,15 +76,4 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
-}
-
-.logout{
-  background-color: white;
-  color: green;
-  border-radius: 10px;
-}
-
-.logout:hover{
-  background-color: white;
-  color: green;
 }
