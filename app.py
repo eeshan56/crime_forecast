@@ -40,7 +40,6 @@ def ad_home():
 
 @app.route("/ad_ner", methods = ['GET', 'POST'])
 def ad_ner():
-	flag = False
 	form = NERForm()
 	if 'username' in session and 'email' in session and 'admin' in session:
 		if request.method == "POST":
