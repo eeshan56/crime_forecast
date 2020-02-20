@@ -1,6 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
+from wtforms.fields.html5 import DateField
+import datetime
 
 class RegistrationForm(FlaskForm):
 	
@@ -19,5 +21,18 @@ class LoginForm(FlaskForm):
 
 class NERForm(FlaskForm):
 
-	text_area = TextAreaField("Enter crime sentence for entity extraction", validators = [DataRequired()])
+	date_field = DateField('Enter the date', format = '%Y-%m-%d', default = datetime.date.today())
+	text_area = TextAreaField("Enter crime query", validators = [DataRequired()])
 	submit = SubmitField('Extract')
+
+class ForgotPassword(FlaskForm):
+
+	email = StringField('Enter your email', validators = [DataRequired(), Email()])
+	submit = SubmitField('Submit')
+
+class ResetPassword(FlaskForm):
+
+	reset = StringField('Enter reset code', validators = [DataRequired()])
+	password = PasswordField('New Password', validators = [DataRequired()])
+	confirm_password = PasswordField('Confirm Password', validators = [DataRequired(), EqualTo('password')])
+	submit = SubmitField('Submit')

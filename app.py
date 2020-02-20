@@ -1,10 +1,14 @@
 from flask import Flask, render_template, redirect, request, url_for, flash, session
-from form import RegistrationForm, LoginForm, NERForm
+from form import RegistrationForm, LoginForm, NERForm, ForgotPassword, ResetPassword
 from pymongo import MongoClient
 from passlib.hash import sha256_crypt
 from datetime import timedelta
+from datetime import date
 import requests
 import json
+import smtplib
+
+host = '0.0.0.0'
 
 app = Flask(__name__)
 app.secret_key = '0f728c6b5c9f6e02690f9496da4818ae'
@@ -40,32 +44,43 @@ def ad_ner():
 	form = NERForm()
 	if 'username' in session and 'email' in session and 'admin' in session:
 		if request.method == "POST":
-			text = form.text_area.data
-			processed_text = text
+			processed_text = form.text_area.data
 
 			client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
 			db = client.get_database('user_db')
 
 			article_db = db.articles
 
-			print(processed_text)
+			#print(processed_text)
 
 			data = json.dumps({"text" : processed_text})
 
 			#data = '{"text": "Seven young men, armed with sharp weapons, went on the rampage in Nigdi on Friday night."}'
 
-			print(data)
+			#print(data)
 
 			#print(data2)
 
-			response = requests.post('http://192.168.43.165:5005/model/parse', data = data)
+			response = requests.post('http://localhost:5005/model/parse', data = data)
 
 			json_data = json.loads(response.text)
 
-			article_doc = {"article" : str(json_data)}
+			list_of_entities = json_data['entities']
 
-			article_db.insert(article_doc)
+			new_article = {}
+			for j in range(len(list_of_entities)):
+				if not str(list_of_entities[j]['entity']) in new_article:
+					new_article[str(list_of_entities[j]['entity'])] = list_of_entities[j]['value']
+
+			d = form.date_field.data.strftime('%Y-%m-%d')
+			d = d.split("-")
+			new_article['Date'] = d[1] + "-" + d[2] + "-" + d[0]
+
+			article_db.insert(new_article)
 			flash('Entities extracted', 'success')
+			form.text_area.data = ""
+			form.date_field.data = date.today()
+			return render_template('admin_ner.html', title = 'NER', form = form)
 	else:
 		if 'username' in session and 'email' in session:
 			flash("Admin pages aren't accessible to users", 'danger')
@@ -116,9 +131,56 @@ def map():
 
 	return render_template('map.html', title = 'Map')
 
-@app.route("/forgot")
+# @app.route("/reset_password")
+# def reset_password():
+# 	form = ResetPassword()
+
+# 	if request.method == 'POST':
+
+# 		if form.validate_on_submit():
+
+
+
+# 	return render_template('reset_password.html', title = 'Reset Password', form = form)
+
+@app.route("/forgot", methods = ['GET', 'POST'])
 def forgot():
-	return render_template('forgot.html')
+	form = ForgotPassword()
+	# if request.method == 'POST':
+	# 	if form.validate_on_submit():
+	# 		client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
+	# 		db1 = client.get_database('user_db')
+	# 		db2 = client.get_database('admin_db')
+
+	# 		u_creds = db1.user_creds
+	# 		a_creds = db2.admin_creds
+
+	# 		find_user1 = list(u_creds.find({'email' : form.email.data}))
+	# 		find_user2 = list(a_creds.find({'email' : form.email.data}))
+
+	# 		if len(find_user1) == 0 and len(find_user2) == 0:
+	# 			flash('Please enter the email associated to your account', 'danger')
+	# 		else:
+	# 			flash('A password reset code has been sent to your email address', 'success')
+
+	# 			reset_code = ""
+
+	# 			content = "Reset Code: " + reset_code + "\nGo to http://" + host + ":5000/reset_password to reset your password.\nPlease don't reply to this message."
+	# 			mail = smtplib.SMTP('smtp.gmail.com', 587)
+
+	# 			mail.ehlo()
+
+	# 			mail.starttls()
+
+	# 			mail.login('crime.forecast56@gmail.com', 'cyprus54#')
+
+	# 			mail.sendmail('crime.forecast56@gmail.com', form.email.data, content)
+
+	# 			mail.close()
+
+	# 			return redirect(url_for('reset_password'))
+
+	return render_template('forgot.html', title = 'Forgot Password', form = form)
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
@@ -295,4 +357,4 @@ def ad_register():
 
 if __name__ == '__main__':
 	#logged_in = False
-	app.run(host = '0.0.0.0', debug = True)
+	app.run(host = host, debug = True)

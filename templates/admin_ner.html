@@ -4,11 +4,15 @@
 		<form method="POST", action="">
 			{{ form.hidden_tag() }}
 			<fieldset class = "form-group">
-				<legend class = "border-bottom mb-4"><center>Crime Entity Extraction</center></legend>
+				<legend class = "border-bottom mb-4"><center><h4>Crime Entity Extraction</h4></center></legend>
 				
 				<div class="form-group">
-<!-- 					{{ form.text_area(class="form-control-label") }}
- -->					{{ form.text_area(class="form-control form-control-lg") }}
+					<span class="form-control-label"><h5>Enter date</h5></span>
+					{{ form.date_field(class="form-control form-control-lg") }}
+				</div>
+				<div class="form-group">
+					<span class="form-control-label"><h5>Enter crime query</h5></span>
+					{{ form.text_area(class="form-control form-control-lg") }}
 				</div>
 			</fieldset>
 			<div class="form-group">
