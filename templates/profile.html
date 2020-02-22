@@ -10,4 +10,9 @@
 		<br>
 		<a href="{{ url_for('logout') }}"><input type="button" name="logout" class="btn btn-outline-info" value="Logout"></a>
 	</div>
+	<div class="border-top pt-3">
+		<small class="text-muted">
+			<a class="ml-2" href="{{ url_for('resend', email = email) }}">Reset Password</a>
+		</small>
+	</div>
 {% endblock content %}

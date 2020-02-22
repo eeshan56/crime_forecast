@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-	<!-- <div class = "content-section">
+	<div class = "content-section">
 		<form method="POST", action="">
 			{{ form.hidden_tag() }}
 			<fieldset class = "form-group">
@@ -25,6 +25,7 @@
 			</fieldset>
 			<div class="form-group">
 				{{ form.submit(class="btn btn-outline-info") }}
+				<!-- <a class="ml-2" href="{{ url_for('register') }}">Resend Code</a> -->
 			</div>
 		</form>
 	</div>
@@ -32,6 +33,6 @@
 		<small class="text-muted">
 			Don't have an account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up here</a>
 		</small>
-	</div> -->
-	<h1>This page is still under construction</h1>
+	</div>
+	<!-- <h1>This page is still under construction</h1> -->
 {% endblock content %}

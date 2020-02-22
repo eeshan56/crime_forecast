@@ -2,11 +2,14 @@ from flask import Flask, render_template, redirect, request, url_for, flash, ses
 from form import RegistrationForm, LoginForm, NERForm, ForgotPassword, ResetPassword
 from pymongo import MongoClient
 from passlib.hash import sha256_crypt
-from datetime import timedelta
-from datetime import date
+from datetime import timedelta, date, datetime
+from urllib.parse import urlencode
+
 import requests
 import json
 import smtplib
+import random
+import string
 
 host = '0.0.0.0'
 
@@ -20,11 +23,6 @@ def home():
 	if 'admin' in session:
 		return redirect(url_for('ad_home'))
 	return render_template('index.html')
-
-# @app.route("/ad_ner", methods = ['POST'])
-# def ad_ner1():
-# 	form = NERForm()
-# 	return render_template('admin_ner.html', title = 'NER', form = form)
 
 @app.route("/ad_home")
 def ad_home():
@@ -78,7 +76,6 @@ def ad_ner():
 			article_db.insert(new_article)
 			flash('Entities extracted', 'success')
 			form.text_area.data = ""
-			form.date_field.data = date.today()
 			return render_template('admin_ner.html', title = 'NER', form = form)
 	else:
 		if 'username' in session and 'email' in session:
@@ -103,7 +100,7 @@ def about():
 @app.route("/profile")
 def profile():
 	if 'username' in session and 'email' in session:
-		return render_template('profile.html', title = 'My Profile')
+		return render_template('profile.html', email = session['email'], title = 'My Profile')
 	else:
 		return redirect(url_for('login'))
 
@@ -130,54 +127,185 @@ def map():
 
 	return render_template('map.html', title = 'Map')
 
-# @app.route("/reset_password")
-# def reset_password():
-# 	form = ResetPassword()
+@app.route("/reset_password", defaults = {'email' : ''}, methods = ['GET', 'POST'])
+@app.route("/reset_password/<email>", methods = ['GET', 'POST'])
+def reset_password(email):
+	if email == "":
+		if not 'email' in session:
+			flash('You need to be logged in to reset your password', 'danger')
+			return redirect(url_for('home'))
+		else:
+			email = session['email']
 
-# 	if request.method == 'POST':
+	form = ResetPassword()
 
-# 		if form.validate_on_submit():
+	if request.method == 'POST':
 
+		if form.validate_on_submit():
 
+			client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
+			db = client.get_database('reset_db')
+			creds = db.reset_creds
+			reset_doc = list(creds.find({'email_' : email}))
+			creds.delete_many({"email_" : email})
+			if reset_doc[0]['admin']:
 
-# 	return render_template('reset_password.html', title = 'Reset Password', form = form)
+				if sha256_crypt.verify(form.reset.data, reset_doc[0]['code']):
+
+					if (datetime.now() - reset_doc[0]['timestamp']).seconds > 120:
+
+						flash("This code is no longer valid. Click 'Resend Code'", 'danger')
+
+					else:
+
+						dbA = client.get_database('admin_db')
+						a_creds = dbA.admin_creds
+						admin_guy = admin_creds.find({"email" : email})
+						admin_creds.update_one({"email" : email}, {"$set" : {"passwd" : sha256_crypt.encrypt(form.password.data)}})
+						
+						session['email'] = email
+						session['username'] = admin_guy['username']
+						session['admin'] = 1
+
+						flash("Password reset successful", 'success')
+						return redirect(url_for('map'))
+				else:
+
+					flash("Please enter the valid code", 'danger')
+			else:
+
+				if sha256_crypt.verify(form.reset.data, reset_doc[0]['code']):
+
+					if (datetime.now() - reset_doc[0]['timestamp']).seconds > 120:
+
+						flash("This code is no longer valid. Click 'Resend Code'", 'danger')
+
+					else:
+
+						dbU = client.get_database('user_db')
+						u_creds = dbU.user_creds
+						user_guy = list(u_creds.find({"email" : email}))
+						u_creds.update_one({"email" : email}, {"$set" : {"passwd" : sha256_crypt.encrypt(form.password.data)}})
+						
+						session['email'] = email
+						session['username'] = user_guy[0]['username']
+
+						flash("Password reset successful", 'success')
+						return redirect(url_for('home'))
+				else:
+
+					flash("Please enter the valid code", 'danger')
+
+	return render_template('reset_password.html', title = 'Reset Password', email = email, form = form)
+
+@app.route("/resend", defaults = {'email' : ''}, methods = ['GET', 'POST'])
+@app.route("/resend/<email>", methods = ['GET', 'POST'])
+def resend(email):
+	if email == "":
+		if 'admin' in session:
+			return redirect(url_for('ad_home'))
+		else:
+			return redirect(url_for('home'))
+
+	client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
+
+	db = client.get_database('reset_db')
+	dbA = client.get_database('admin_db')
+	dbU = client.get_database('user_db')
+
+	creds = db.reset_creds
+	a_creds = dbA.admin_creds
+	u_creds = dbU.user_creds
+
+	find_user1 = list(u_creds.find({"email" : email}))
+	find_user2 = list(a_creds.find({"email" : email}))
+
+	creds.delete_many({"email_" : email})
+
+	reset_code = randomStringDigits(8)
+	reset_doc = {}
+	if len(find_user1) == 0:
+		reset_doc = {'email_' : email, 'code' : sha256_crypt.encrypt(reset_code), 'admin' : True, 'timestamp' : datetime.now()}
+	else:
+		reset_doc = {'email_' : email, 'code' : sha256_crypt.encrypt(reset_code), 'admin' : False, 'timestamp' : datetime.now()}
+	creds.insert_one(reset_doc)
+
+	payload = {'email' : email}
+	result = urlencode(payload)
+	email_user = result[result.index('=') + 1 : ]
+
+	subject = "Reset Password"
+	content = "Reset Code: " + reset_code + "\nGo to http://" + host + ":5000/reset_password/" + email_user + " to reset your password and type in the above code.\nPlease don't reply to this message."
+	mail = smtplib.SMTP('smtp.gmail.com', 587)
+
+	mail.ehlo()
+
+	mail.starttls()
+
+	mail.login('crime.forecast56@gmail.com', 'cyprus54#')
+
+	msg = 'Subject: {}\n\n{}'.format(subject, content)
+	mail.sendmail('crime.forecast56@gmail.com', email, msg)
+
+	mail.close()
+	flash('A reset code has been sent to your email address', 'success')
+	return redirect(url_for('reset_password', email = email))
 
 @app.route("/forgot", methods = ['GET', 'POST'])
 def forgot():
 	form = ForgotPassword()
-	# if request.method == 'POST':
-	# 	if form.validate_on_submit():
-	# 		client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
-	# 		db1 = client.get_database('user_db')
-	# 		db2 = client.get_database('admin_db')
 
-	# 		u_creds = db1.user_creds
-	# 		a_creds = db2.admin_creds
+	if request.method == 'POST':
+		if form.validate_on_submit():
 
-	# 		find_user1 = list(u_creds.find({'email' : form.email.data}))
-	# 		find_user2 = list(a_creds.find({'email' : form.email.data}))
+			client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
+			db1 = client.get_database('user_db')
+			db2 = client.get_database('admin_db')
 
-	# 		if len(find_user1) == 0 and len(find_user2) == 0:
-	# 			flash('Please enter the email associated to your account', 'danger')
-	# 		else:
-	# 			flash('A password reset code has been sent to your email address', 'success')
+			u_creds = db1.user_creds
+			a_creds = db2.admin_creds
 
-	# 			reset_code = ""
+			find_user1 = list(u_creds.find({'email' : form.email.data}))
+			find_user2 = list(a_creds.find({'email' : form.email.data}))
 
-	# 			content = "Reset Code: " + reset_code + "\nGo to http://" + host + ":5000/reset_password to reset your password.\nPlease don't reply to this message."
-	# 			mail = smtplib.SMTP('smtp.gmail.com', 587)
+			if len(find_user1) == 0 and len(find_user2) == 0:
+				flash('Please enter the email associated to your account', 'danger')
+			else:
 
-	# 			mail.ehlo()
+				flash('A password reset code has been sent to your email address', 'success')
 
-	# 			mail.starttls()
+				reset_code = randomStringDigits(8)
 
-	# 			mail.login('crime.forecast56@gmail.com', 'cyprus54#')
+				reset_doc = {}
+				if len(find_user1) == 0:
+					reset_doc = {'email_' : form.email.data, 'code' : sha256_crypt.encrypt(reset_code), 'admin' : True, 'timestamp' : datetime.now()}
+				else:
+					reset_doc = {'email_' : form.email.data, 'code' : sha256_crypt.encrypt(reset_code), 'admin' : False, 'timestamp' : datetime.now()}
 
-	# 			mail.sendmail('crime.forecast56@gmail.com', form.email.data, content)
+				r_creds = client.get_database('reset_db').reset_creds
+				r_creds.delete_many({'email_' : form.email.data})
+				r_creds.insert_one(reset_doc)
 
-	# 			mail.close()
+				payload = {'email' : form.email.data}
+				result = urlencode(payload)
+				email_user = result[result.index('=') + 1 : ]
 
-	# 			return redirect(url_for('reset_password'))
+				subject = "Reset Password"
+				content = "Reset Code: " + reset_code + "\nGo to http://" + host + ":5000/reset_password/ " + email_user + " to reset your password and type in the above code.\nPlease don't reply to this message."
+				mail = smtplib.SMTP('smtp.gmail.com', 587)
+
+				mail.ehlo()
+
+				mail.starttls()
+
+				mail.login('crime.forecast56@gmail.com', 'cyprus54#')
+
+				msg = 'Subject: {}\n\n{}'.format(subject, content)
+				mail.sendmail('crime.forecast56@gmail.com', form.email.data, msg)
+
+				mail.close()
+
+				return redirect(url_for('reset_password', email = form.email.data))
 
 	return render_template('forgot.html', title = 'Forgot Password', form = form)
 
@@ -353,6 +481,16 @@ def ad_register():
 
 			return redirect(url_for('home'))
 	return render_template('admin_register.html', title = 'Admin Sign Up', form = form)
+
+
+def randomStringDigits(stringLength = 6):
+
+    """
+    Generate a random string of letters and digits
+    """
+
+    lettersAndDigits = string.ascii_letters + string.digits
+    return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))
 
 if __name__ == '__main__':
 	#logged_in = False
