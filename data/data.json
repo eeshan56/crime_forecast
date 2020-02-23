@@ -1,0 +1,2838 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "The Yerawada police on Wednesday arrested a man (32) for molesting his 14-year old daughter at their residence between May 24 and 29.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 57,
+            "end": 66,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 4,
+            "end": 12,
+            "value": "Yerawada",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Hadapsar police on Sunday detained a 17-year-old boy for stealing seven vehicles, including a car and five motorcycles.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "Hadapsar",
+            "entity": "Location"
+          },
+          {
+            "start": 61,
+            "end": 69,
+            "value": "stealing",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The body of a woman, aged around 35 years, was found in a gunny sack in the Mutha riverbed on Thursday morning. The woman was wearing a green top and black trousers. She was strangulated to death. Before packing the body in a sack, the suspects had tied her limbs with a rope, the Deccan police said.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 281,
+            "end": 287,
+            "value": "Deccan",
+            "entity": "Location"
+          },
+          {
+            "start": 174,
+            "end": 186,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A man was booked on Wednesday for driving his wife to end her life over domestic reasons. Manisha Pandharinath Gengaje (28) committed suicide by hanging herself to the hook of the ceiling fan on Tuesday morning at her Dighi residence, Manisha’s mother, Changunabai Madage (52), stated in her complaint.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 54,
+            "end": 66,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 218,
+            "end": 223,
+            "value": "Dighi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Cash and valuables, collectively worth Rs4.13 lakh, were stolen from two different apartments near Sinhagad college in Ambegaon Budruk on Wednesday night, police said. A woman (68) has lodged a complaint with the Bharati Vidyapeeth police.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 213,
+            "end": 231,
+            "value": "Bharati Vidyapeeth",
+            "entity": "Location"
+          },
+          {
+            "start": 57,
+            "end": 63,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two motorcycle-borne suspects snatched a gold chain worth Rs50,000 belonging to a woman (40) at Padvalnagar in Thergaon on March 11. The woman was walking towards her residence when the incident happened, the Wakad police said.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 111,
+            "end": 119,
+            "value": "Thergaon",
+            "entity": "Location"
+          },
+          {
+            "start": 30,
+            "end": 51,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A telecaller was booked for cheating Sagar Waghmare (23) of Rs1.55 lakh in 2015 on the pretext of offering him a job in a private firm. The suspect claimed that he was from an online recruitment website and lured Waghmare into depositing money in his account.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Hadapsar police on Thursday arrested Raju Ashok Pote (28), a medical store employee, for stealing 773 vials of padeatric vaccines from an apartment at Shivam Complex in Hadapsar between May 28 and 29.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 173,
+            "end": 181,
+            "value": "Hadapsar",
+            "entity": "Location"
+          },
+          {
+            "start": 93,
+            "end": 101,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Pimpri police arrested 10 members of a gang and cracked 15 burglaries. The police recovered stolen gold and silver ornaments, valuables, three vehicles, two firearms and three rounds, totally worth Rs14 lakh.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 10,
+            "value": "Pimpri",
+            "entity": "Location"
+          },
+          {
+            "start": 96,
+            "end": 102,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Three criminals were arrested on Friday for attacking and robbing an autorickshaw driver of Rs1,500 after placing a sickle on his neck when he refused to recognize them as ‘bhai’ (local don) in Gawaliali at 8.30pm on Thursday. ",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 194,
+            "end": 203,
+            "value": "Gawaliali",
+            "entity": "Location"
+          },
+          {
+            "start": 44,
+            "end": 53,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A tempo driver was beaten to death by two drivers of a private luxury bus in a road rage incident near the viaduct on the Katraj bypass in the wee hours of Thursday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 122,
+            "end": 128,
+            "value": "Katraj",
+            "entity": "Location"
+          },
+          {
+            "start": 19,
+            "end": 34,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Three men were booked for attacking a 36-year-old man and his friend with sticks in Dhayari village on Thursday evening after they suspected the latter of being thieves.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 26,
+            "end": 35,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 84,
+            "end": 91,
+            "value": "Dhayari",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Four men were booked for attempting to murder a man from Sadashiv Peth. The incident, which took place at Kumbarwada near Poona hospital around 3.30am on Friday, was due to an old enmity.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 25,
+            "end": 45,
+            "value": "Murder",
+            "entity": "Crime"
+          },
+          {
+            "start": 106,
+            "end": 116,
+            "value": "Kumbarwada",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Vikas Gaikwad was booked for allegedly threatening to kill Santosh Marathe (33) from Kothrud and stealing his car which had two phones and documents. The incident occurred near Warje bus stop at 4.30pm on Friday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 97,
+            "end": 105,
+            "value": "stealing",
+            "entity": "Crime"
+          },
+          {
+            "start": 177,
+            "end": 182,
+            "value": "Warje",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "An unidentified man was found bludgeoned to death with a stone below the Holkar overbridge on Mula road. It is suspect that the incident occurred two-three days ago.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 94,
+            "end": 103,
+            "value": "Mula road",
+            "entity": "Location"
+          },
+          {
+            "start": 30,
+            "end": 49,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two goldsmiths were booked on Friday for misappropriating 490g of gold worth Rs14.80 lakh on the pretext of making ornaments between May 15 and May 25. The jeweller they worked for — Rajesh Kothari (54) — lodged an FIR against them.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 41,
+            "end": 57,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The crime branch on Thursday arrested four persons for providing shelter to Shwetang Nikalje for kidnapping a 17-year-old girl on the pretext of marriage, after drawing flak from the Bombay high court for failing to arrest him. Girl was abducted from Purandar taluka near Pune.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 97,
+            "end": 107,
+            "value": "Kidnapping",
+            "entity": "Crime"
+          },
+          {
+            "start": 251,
+            "end": 266,
+            "value": "Purandar taluka",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "An enforcement officer of the Employees Provident Fund Office (EPFO), Avinash Banshi Patra, was arrested on Saturday in Akurdi for demanding and accepting a bribe of Rs20,000 from a garden maintenance contractor’s employee.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 145,
+            "end": 162,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 120,
+            "end": 126,
+            "value": "Akurdi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Jitendra Jagtap (53) of Ghorpade Peth committed suicide by jumping in front of a speeding train near BT Kawade Road on Saturday afternoon. A case of accidental death has been registered.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 101,
+            "end": 115,
+            "value": "BT Kawade Road",
+            "entity": "Location"
+          },
+          {
+            "start": 38,
+            "end": 55,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Backup batteries worth Rs8,000 for the LED screen at the BRTS bus stop in Yerawada were stolen on Thursday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 74,
+            "end": 82,
+            "value": "Yerawada",
+            "entity": "Location"
+          },
+          {
+            "start": 88,
+            "end": 94,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A man around 65 years of age died after a vehicle ran over him while he was crossing the Katraj-Dehu bypass. The accident occurred at Punawale on Saturday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 134,
+            "end": 142,
+            "value": "Punawale",
+            "entity": "Location"
+          },
+          {
+            "start": 50,
+            "end": 58,
+            "value": "Accident",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Four men were arrested for stealing seven vehicles, 16 oil boxes and 20kg of copper, collectively worth Rs14.7 lakh, from the MIDC Bhosari area.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 131,
+            "end": 138,
+            "value": "Bhosari",
+            "entity": "Location"
+          },
+          {
+            "start": 27,
+            "end": 35,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A woman working as a domestic help was booked on Friday for stealing valuables worth Rs2.6 lakh from a businessman’s Kalyaninagar flat between May 29 and June 2.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 60,
+            "end": 68,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 117,
+            "end": 129,
+            "value": "Kalyaninagar",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Pune railway police on Sunday booked a sitting corporator of the Pune Municipal Corporation (PMC) and a builder, apart from six others, for allegedly driving Jitendra Jagtap, a 53-year-old Ghorpade Peth resident, to end his life by jumping in front of a train near B T Kawade road on Saturday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 220,
+            "end": 232,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 269,
+            "end": 284,
+            "value": "B T Kawade road",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The crime branch of the Pune police on Saturday detained two persons in connection with the death of a woman. She had been murdered and her body was stuffed into a gunny sack and disposed of in the Mutha riverbed on Thursday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 198,
+            "end": 203,
+            "value": "Mutha",
+            "entity": "Location"
+          },
+          {
+            "start": 92,
+            "end": 100,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "An unidentified man, aged around 40, was run over by an ambulance in Budhwar Peth on Saturday morning. The Faraskhana police have booked the ambulance driver for negligent driving.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 162,
+            "end": 179,
+            "value": "Accident",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Wanowrie police on Saturday registered an offence against a domestic help for stealing a debit card and withdrawing Rs1.28 lakh from an ATM. The suspect had also stolen cash worth Rs50,000 and foreign currency collectively worth Rs3.18 lakh.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "Wanowrie",
+            "entity": "Location"
+          },
+          {
+            "start": 82,
+            "end": 90,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Pune rural police on Saturday detained a 17-year-old youngster resident of Ravet for robbing a man of his cellphone in the neighbourhood recently.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 79,
+            "end": 84,
+            "value": "Ravet",
+            "entity": "Location"
+          },
+          {
+            "start": 89,
+            "end": 96,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Gold ornaments worth Rs3 lakh were stolen from an elderly couple’s bag by four people in an SUV, who had offered to drop them to Shivajinagar on Sunday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 35,
+            "end": 41,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 129,
+            "end": 141,
+            "value": "Shivajinagar",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Four vehicles were vandalised and some houses pelted with stones in Kondhwa’s Ashrafnagar area around midnight on Sunday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 68,
+            "end": 75,
+            "value": "Kondhwa",
+            "entity": "Location"
+          },
+          {
+            "start": 19,
+            "end": 29,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A 19-year-old woman from Phaltan in Satara district has been arrested for allegedly snatching a gold chain worth Rs 40,000 of a woman near the Hadapsar-Mundhwa ward office on Sunday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 143,
+            "end": 164,
+            "value": "Hadapsar-Mundhwa ward",
+            "entity": "Location"
+          },
+          {
+            "start": 84,
+            "end": 106,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Three persons were arrested on Monday from Handewadi for demanding Rs10 lakh from a medical practitioner in Katraj and threatening him of dire consequences since December 2017.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 57,
+            "end": 66,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 108,
+            "end": 114,
+            "value": "Katraj",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A man (36) was arrested for raping his sister-in-law by threatening to kill her seven-year-old son. The incident occurred in Alandi.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 125,
+            "end": 131,
+            "value": "Alandi",
+            "entity": "Location"
+          },
+          {
+            "start": 28,
+            "end": 34,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Thieves smashed the window of a car parked in Swargate and stole a purse containing cash and a cellphone, totally worth Rs13,000.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 59,
+            "end": 64,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 46,
+            "end": 54,
+            "value": "Swargate",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Thieves broke the rear window of a car parked on Prabhat Road and stole Rs8,000 in cash. A 42-year-old state government employee has lodged a complaint with the Deccan Gymkhana police.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 49,
+            "end": 61,
+            "value": "Prabhat Road",
+            "entity": "Location"
+          },
+          {
+            "start": 66,
+            "end": 71,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A man was found murdered on the footpath at Shivaji Road on Monday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 44,
+            "end": 56,
+            "value": "Shivaji Road",
+            "entity": "Location"
+          },
+          {
+            "start": 16,
+            "end": 24,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Four men ransacked a footwear shop in Thergaon on Sunday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "Thergaon",
+            "entity": "Location"
+          },
+          {
+            "start": 9,
+            "end": 18,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A gang of eight men assaulted two youths in Pimpri late on Sunday night following a petty dispute.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 44,
+            "end": 50,
+            "value": "Pimpri",
+            "entity": "Location"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A 30-year-old man from Rihe village in Mulshi taluka was bludgeoned to death by a gang of five men on Sunday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 39,
+            "end": 45,
+            "value": "Mulshi",
+            "entity": "Location"
+          },
+          {
+            "start": 57,
+            "end": 67,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Bund Garden police have booked a woman from Yerawada after a security guard at the Sassoon General Hospital accused the former of assaulting her on Sunday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 134,
+            "end": 144,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 4,
+            "end": 15,
+            "value": "Bund Garden",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Five men were arrested on Monday for allegedly abetting the suicide of real estate broker Jitendra Jagtap, who jumped in front of a moving train near BT Kawade Road on Saturday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 150,
+            "end": 164,
+            "value": "BT Kawade Road",
+            "entity": "Location"
+          },
+          {
+            "start": 47,
+            "end": 55,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The city crime branch arrested two men from Kondhwa for murdering a commercial sex worker (CSW) over Rs1,500 in the wee hours of Thursday in the Law College Road area.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 56,
+            "end": 65,
+            "value": "Murder",
+            "entity": "Crime"
+          },
+          {
+            "start": 145,
+            "end": 161,
+            "value": "Law College Road",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A car driver allegedly molested a 41-year-old woman from Navi Mumbai late on Sunday night when she intervened in a scuffle between him and her husband following a minor accident at Warje on the Katraj-Dehu Road bypass.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "Sexual Offense",
+            "entity": "Crime"
+          },
+          {
+            "start": 181,
+            "end": 186,
+            "value": "Warje",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Wakad police on Tuesday claimed of solving five chain-snatching cases with the arrest of a reporter working with a weekly news portal and his cousin.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "Wakad",
+            "entity": "Location"
+          },
+          {
+            "start": 52,
+            "end": 67,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Seven men were arrested on Monday night for vandalizing four vehicles and pelting stones at some houses at Ashrafnagar in Kondhwa on Sunday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 122,
+            "end": 129,
+            "value": "Kondhwa",
+            "entity": "Location"
+          },
+          {
+            "start": 44,
+            "end": 55,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Around 15 men were booked on Monday for attacking and injuring two stall owners and extorting Rs1,300 from them at Ambedkar Chowk in Yerawada around 7.30pm on Sunday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 40,
+            "end": 49,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 133,
+            "end": 141,
+            "value": "Yerawada",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A 24-year-old criminal was arrested on Monday for theft at a department store on Tilak Road on May 24.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 81,
+            "end": 91,
+            "value": "Tilak Road",
+            "entity": "Location"
+          },
+          {
+            "start": 50,
+            "end": 55,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A criminal, Girish Hiwale (20), was arrested for vandalizing a car belonging to the vice-president of a private bank in Kalepadal around 8.45pm on June 1. Three men, including Hiwale, were riding triple seat on their motorcycle when they intercepted the car in Wanowrie.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 120,
+            "end": 129,
+            "value": "Kalepadal",
+            "entity": "Location"
+          },
+          {
+            "start": 49,
+            "end": 60,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A man from Khamboli village in Mulshi was killed after his bike rammed a PMPML bus after being knocked down by a cement mixer truck in Hinjewadi on Monday night. The truck driver was arrested on charges of rash driving.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 206,
+            "end": 218,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 135,
+            "end": 144,
+            "value": "Hinjewadi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Two men on a bike snatched purses of two women passengers on Tuesday, making away with cash and valuables worth Rs 1.37 lakh. The incidents occurred near Pune railway station and Gokhale Smarak Chowk on Fergusson College Road.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 154,
+            "end": 174,
+            "value": "Pune railway station",
+            "entity": "Location"
+          },
+          {
+            "start": 203,
+            "end": 225,
+            "value": "Fergusson College Road",
+            "entity": "Location2"
+          }
+        ]
+      },
+      {
+        "text": "Two men on a motorcycle snatched a gold chain worth Rs1.45 lakh from a 59-year-old man in Chinchwad on Wednesday around 5.45am.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 24,
+            "end": 45,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          },
+          {
+            "start": 90,
+            "end": 99,
+            "value": "Chinchwad",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Burglars broke into a flat in Nigdi Pradhikaran and made away with gold ornaments worth Rs2.5 lakh on Tuesday sometime between 10am and 6pm when the complainant, Vijaykumar Ananatpur.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 30,
+            "end": 47,
+            "value": "Nigdi Pradhikaran",
+            "entity": "Location"
+          },
+          {
+            "start": 9,
+            "end": 19,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A 23-year-old man, Imam Sayyad, of Phad Ghate was arrested for stealing Rs1,000 cash and a cellphone collectively worth Rs11,000 from a man on Bajirao Road on Wednesday early morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 63,
+            "end": 71,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 143,
+            "end": 155,
+            "value": "Bajirao Road",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Three men attempted to steal a sandalwood tree from a bungalow in Koregaon Park in the early hours of Tuesday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 66,
+            "end": 79,
+            "value": "Koregaon Park",
+            "entity": "Location"
+          },
+          {
+            "start": 23,
+            "end": 28,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Samarth police have booked two persons, one of them a woman, for cheating several persons to the tune of Rs 20.54 lakh between December 2016 and January 2018 by promising them handsome returns on investments in cryptocurrencies.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 69,
+            "end": 77,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          },
+          {
+            "start": 4,
+            "end": 11,
+            "value": "Samarth",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Three men were booked on Tuesday for molesting two minor girls in separate incidents at Yerawada and Wanowrie.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 37,
+            "end": 46,
+            "value": "Sexual Offense",
+            "entity": "Crime"
+          },
+          {
+            "start": 101,
+            "end": 109,
+            "value": "Wanowrie",
+            "entity": "Location2"
+          },
+          {
+            "start": 88,
+            "end": 96,
+            "value": "Yerawada",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A 21-year-old man from Vadarwadi was arrested for raping a 19-year-old woman after promising her a job. The incident happened in a lodge at Katraj on Monday evening.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 50,
+            "end": 56,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 140,
+            "end": 146,
+            "value": "Katraj",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Two persons on Thursday afternoon assaulted a builder and his lawyer with sharp weapons in the realtor’s office on Prabhat Road over a land parcel dispute.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 115,
+            "end": 127,
+            "value": "Prabhat Road",
+            "entity": "Location"
+          },
+          {
+            "start": 34,
+            "end": 43,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": " man (50) was arrested on Wednesday for outraging the modesty of his neighbour’s seven-and-a-half-yearold daughter inside his house. An officer from the Bhosari police said the girl’s mother came to the police station and lodged a complaint against her neighbour on Wednesday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 153,
+            "end": 160,
+            "value": "Bhosari",
+            "entity": "Location"
+          },
+          {
+            "start": 40,
+            "end": 61,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A masked conman duped a 58-year-old shopowner of gold ornaments worth Rs33,000 at Vadgaon Budruk on Wednesday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 82,
+            "end": 96,
+            "value": "Vadgaon Budruk",
+            "entity": "Location"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two men on a motorcycle snatched a gold chain worth Rs 45,000 of a 36-year-old woman on Bootee Street in Camp on Wednesday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 88,
+            "end": 101,
+            "value": "Bootee Street",
+            "entity": "Location"
+          },
+          {
+            "start": 24,
+            "end": 45,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Bhosari police on Wednesday booked a 30-year-old man from Thane for duping a resident of Pimple Gurav of Rs72 lakh.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 11,
+            "value": "Bhosari",
+            "entity": "Location"
+          },
+          {
+            "start": 72,
+            "end": 78,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Alankar police on Wednesday arrested a 34-year-old man from Warje-Malwadi for beating up and extorting Rs 5,000 from a garage owner in Kothrud on Tuesday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 139,
+            "end": 146,
+            "value": "Kothrud",
+            "entity": "Location"
+          },
+          {
+            "start": 97,
+            "end": 106,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A man was detained for creating a ruckus at three shops in Kalewadi on Wednesday evening. The Wakad police said the suspect pelted stones at a bakery, a medical store and a garment shop on Tapkir Chowk, Kalewadi.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 59,
+            "end": 67,
+            "value": "Kalewadi",
+            "entity": "Location"
+          },
+          {
+            "start": 23,
+            "end": 40,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "An incensed mob of around 15 men went on a rampage after a 28-year-old was crushed under the wheels of a public transport bus on Wednesday evening. The accident occurred around 9pm, right outside Central Mall on Bund Garden Road.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 212,
+            "end": 223,
+            "value": "Bund Garden",
+            "entity": "Location"
+          },
+          {
+            "start": 43,
+            "end": 50,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A detective was arrested, possibly for the first time, for stalking a 36-year-old human resource manager of an IT firm at Magarpatta City around 11.50am on Thursday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 59,
+            "end": 67,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 122,
+            "end": 137,
+            "value": "Magarpatta City",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Five persons were arrested on Friday for abducting the general manager of a construction firm on May 22 and extorting ransom of Rs14.3 lakh. The general manager, Rahul Katakamwar (37), was abducted when he was going home with his driver, Vijay. Four men on two bikes intercepted them at Sopanbaug and abducted them.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 287,
+            "end": 296,
+            "value": "Sopanbaug",
+            "entity": "Location"
+          },
+          {
+            "start": 41,
+            "end": 50,
+            "value": "Kidnapping",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Wanowrie police on Thursday arrested nine persons, including five women, for attacking the administrator and the security guard of Rosary School on Salunke Vihar Road in Kondhwa on the night of June 6.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 81,
+            "end": 90,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 174,
+            "end": 181,
+            "value": "Kondhwa",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Kothrud police on Thursday registered an offence against 12 people for creating a ruckus in the Sutardara area of Kothrud.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 118,
+            "end": 125,
+            "value": "Kothrud",
+            "entity": "Location"
+          },
+          {
+            "start": 75,
+            "end": 92,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A 21-year-old youth was arrested on Friday for trying to kill an elderly homeless woman when she resisted his rape attempt late on Thursday night at a tin shed near an engineering company in Bhosari MIDC.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 47,
+            "end": 61,
+            "value": "Murder",
+            "entity": "Crime"
+          },
+          {
+            "start": 191,
+            "end": 198,
+            "value": "Bhosari",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Bund Garden police on Friday booked a 17-yearold boy for attacking a traffic policeman after he was caught for talking on his cellphone while driving a scooter. He was told to stop at Kirad Chowk.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 188,
+            "end": 199,
+            "value": "Kirad Chowk",
+            "entity": "Location"
+          },
+          {
+            "start": 61,
+            "end": 70,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Accepting a friend request from a stranger on a social networking site proved costly for a retired 69-year-old woman, duped of Rs 24.16 lakh in May this year. The woman, according to Chatushrungi Police",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 118,
+            "end": 123,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          },
+          {
+            "start": 183,
+            "end": 195,
+            "value": "Chatushrungi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Five sandalwood trees were chopped off and stolen from the premises of the Ammunition Factory officers club at Khadki between June 2 and 3.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 111,
+            "end": 117,
+            "value": "Khadki",
+            "entity": "Location"
+          },
+          {
+            "start": 43,
+            "end": 49,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two smartphones worth Rs15,000 were stolen while a cab driver was fast asleep inside his vehicle in Hadapsar on Friday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 100,
+            "end": 108,
+            "value": "Hadapsar",
+            "entity": "Location"
+          },
+          {
+            "start": 36,
+            "end": 42,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two unidentified men on a motorcycle fired two rounds at a 35-year-old woman on Saturday afternoon. The incident took place near Hindustan Antibiotic Limited (HAL) in Pimpri.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 167,
+            "end": 173,
+            "value": "Pimpri",
+            "entity": "Location"
+          },
+          {
+            "start": 37,
+            "end": 53,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Jijabai Dadarao Gaikwad (70) was killed in an accident at Dandekar bridge on Thursday afternoon. Both the vehicles fled the scene, police said.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 58,
+            "end": 73,
+            "value": "Dandekar bridge",
+            "entity": "Location"
+          },
+          {
+            "start": 106,
+            "end": 119,
+            "value": "Hit & Run",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Harshavardhan Ashruba Pachare (22) of Bibvewadi died after a speeding truck rammed his motorcycle from the rear at Market Yard on Thursday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 115,
+            "end": 126,
+            "value": "Market Yard",
+            "entity": "Location"
+          },
+          {
+            "start": 76,
+            "end": 82,
+            "value": "Accident",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A body of a man around 25 years of age was found in the pond of Bird Valley in Chinchwad on Saturday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 79,
+            "end": 88,
+            "value": "Chinchwad",
+            "entity": "Location"
+          },
+          {
+            "start": 2,
+            "end": 15,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Government Railway Police (GRP) officials found the body of a 25-year-old man on the railway tracks near Shivajinagar railway station on Saturday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 109,
+            "end": 121,
+            "value": "Shivajinagar",
+            "entity": "Location"
+          },
+          {
+            "start": 46,
+            "end": 60,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Hinjewadi police on Sunday arrested a 30-yearold man and his three aides, including his girlfriend, for strangulating his wife to death with a rope and smothering his eight-month-old son near Nere village off the Katraj-Dehu Road bypass on Saturday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 108,
+            "end": 121,
+            "value": "Murder",
+            "entity": "Crime"
+          },
+          {
+            "start": 217,
+            "end": 240,
+            "value": "Katraj-Dehu Road bypass",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Dhiren Tiwari (38) of Hadpasar was killed after his car collided against a Pune Mahanagar Parivahan Mahamandal Limited (PMPML) bus near Pulgate bus stand at 1.30am on Saturday. Tiwari, who owned a finance firm, was returning home after a meeting with a client. The bus driver has been booked for negligent driving.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 296,
+            "end": 313,
+            "value": "Accident",
+            "entity": "Crime"
+          },
+          {
+            "start": 52,
+            "end": 64,
+            "value": "Accident",
+            "entity": "Crime"
+          },
+          {
+            "start": 136,
+            "end": 153,
+            "value": "Pulgate bus stand",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "After being released on bail in a case of vandalism, a criminal on the police records and his four accomplices assaulted two youths with sharp weapons in Kalepadal area on Saturday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 154,
+            "end": 163,
+            "value": "Kalepadal",
+            "entity": "Location"
+          },
+          {
+            "start": 111,
+            "end": 120,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Unidentified men broke into a flat near Salunkhe Vihar and made off with gold ornaments worth Rs 8.33 lakh on Thursday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 40,
+            "end": 54,
+            "value": "Salunkhe Vihar",
+            "entity": "Location"
+          },
+          {
+            "start": 59,
+            "end": 72,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "An 18-year-old boy was booked for sexually assaulting an eight-yearold girl residing in his neighbourhood in the Kharalwadi area.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 34,
+            "end": 53,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 113,
+            "end": 123,
+            "value": "Kharalwadi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A 46-year-old man was booked for stalking and outraging the modesty of his 24-year-old neighbour. \"The man was stalking the woman since two years. However, the woman lodged a complaint on Sunday after he allegedly outraged her modesty outside her house,” an officer from the Vishrantwadi police said.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 214,
+            "end": 234,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 275,
+            "end": 287,
+            "value": "Vishrantwadi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Investigation by the Pimpri police has revealed the involvement of a Pimpri Chinchwad-based lawyer, with a criminal background, in the attack on a 35-year-old woman, who was shot at near Hindustan Antibiotics Limited (HAL) in Pimpri on Saturday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 226,
+            "end": 232,
+            "value": "Pimpri",
+            "entity": "Location"
+          },
+          {
+            "start": 135,
+            "end": 144,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Wakad police on Friday arrested a 30-year-old woman for stealing gold ornaments and cash, collectively worth Rs1.24 lakh, from her employer’s house in Rahatani in March. The police have recovered gold ornaments from the accused.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "Wakad",
+            "entity": "Location"
+          },
+          {
+            "start": 60,
+            "end": 68,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The police on Sunday registered an offence against a 23-year-old man from Dhankawdi for raping a woman at her house in Katraj after threatening to kill her elder son.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 88,
+            "end": 102,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 119,
+            "end": 125,
+            "value": "Katraj",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Bhosari police have booked 16 men and detained five others, including two minors, for allegedly damaging 18 vehicles parked on roads at Gavhane Vasti in Bhosari during the wee hours of Monday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 157,
+            "end": 164,
+            "value": "Bhosari",
+            "entity": "Location"
+          },
+          {
+            "start": 100,
+            "end": 108,
+            "value": "Vandalism",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Some persons broke into a flat in Kalyaninagar and made off with cash and gold ornaments collectively worth Rs6.95 lakh.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 34,
+            "end": 46,
+            "value": "Kalyaninagar",
+            "entity": "Location"
+          },
+          {
+            "start": 51,
+            "end": 59,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Some persons snatched a gold chain worth Rs30,000 of a 43-year-old woman while she was boarding a bus at Alandi bus stop on Sunday morning. The woman and her husband had come to Alandi to pray. The theft happened when they were on their way to Dehu.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 13,
+            "end": 34,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          },
+          {
+            "start": 105,
+            "end": 111,
+            "value": "Alandi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Chandrakant Gandale (52) was robbed of Rs4,000 by two motorcyclists on Sinhagad Road on Friday evening The suspects threatened to kill Gandale’s son, following which he gave them the money without resisting.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 29,
+            "end": 35,
+            "value": "robbed",
+            "entity": "Crime"
+          },
+          {
+            "start": 71,
+            "end": 84,
+            "value": "Sinhagad Road",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "An autorickshaw driver and his accomplices were arrested on Sunday for robbing five labourers of Rs3,500 near Gultekdi.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 110,
+            "end": 118,
+            "value": "Gultekdi",
+            "entity": "Location"
+          },
+          {
+            "start": 71,
+            "end": 78,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A 63-year-old security guard posted at a road construction company’s site in Bavdhan, near Chandni Chowk, along the Katraj-Dehu Road bypass was found murdered in the early hours of Tuesday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 116,
+            "end": 139,
+            "value": "Katraj-Dehu Road bypass",
+            "entity": "Location"
+          },
+          {
+            "start": 144,
+            "end": 158,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Some persons broke the glass window of a parked car and made off with a music system as well as a gold plated Ganesh idol collectively worth Rs61,000 at Mayur Colony in Kothrud in the early hours of Monday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 169,
+            "end": 176,
+            "value": "Kothrud",
+            "entity": "Location"
+          },
+          {
+            "start": 56,
+            "end": 64,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Dattawadi police have registered an offence against a Mumbai-based ornament designer for cheating a city jeweller to the tune of Rs 1.21crore. A resident of Parvati, Kothari’s jewellery shop is located at Mitramandal chowk.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 209,
+            "end": 226,
+            "value": "Mitramandal chowk",
+            "entity": "Location"
+          },
+          {
+            "start": 93,
+            "end": 101,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Pimpri police on Tuesday arrested three men for extorting Rs3.5 lakh from a restaurant owner based out of Pimpri.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 52,
+            "end": 61,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 4,
+            "end": 10,
+            "value": "Pimpri",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Some person(s) entered a flat in Raviwar Peth by using a duplicate key and made off with gold ornaments worth Rs2.5 lakh.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 33,
+            "end": 45,
+            "value": "Raviwar Peth",
+            "entity": "Location"
+          },
+          {
+            "start": 75,
+            "end": 88,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Shatanna Patil (60) of Shivane was run over by an autorickshaw on NDA Road late on Sunday night. The autorickshaw driver, Anuj Kanojia (31), of Hadapsar had fled the spot but was nabbed by some people and handed over to the police.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 35,
+            "end": 43,
+            "value": "Hit & Run",
+            "entity": "Crime"
+          },
+          {
+            "start": 66,
+            "end": 74,
+            "value": "NDA Road",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "An 18-year-old youth was allegedly hacked to death by his 19-year-old cousin in a running bus of the Maharashtra State Road Transport Corporation (MSRTC) near Rajgurunagar in Khed, about 45km from here, on Tuesday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 35,
+            "end": 50,
+            "value": "Murder",
+            "entity": "Crime"
+          },
+          {
+            "start": 175,
+            "end": 179,
+            "value": "Khed",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Four minor boys, aged around 16 years, damaged about nine vehicles parked on a road at Sahyognagar in Nigdi around 11pm on Monday following an alleged dispute among themselves.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 39,
+            "end": 46,
+            "value": "Vandalism",
+            "entity": "Crime"
+          },
+          {
+            "start": 102,
+            "end": 107,
+            "value": "Nigdi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The social security cell of the city police on Tuesday night raided a lodge near Alandi and rescued seven women, who were forced into flesh trade by a owner of the lodge and its manager.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 81,
+            "end": 87,
+            "value": "Alandi",
+            "entity": "Location"
+          },
+          {
+            "start": 134,
+            "end": 145,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A man diverted the attention of a 51-year-old woman and made off with her gold ornaments worth Rs66,0 in Dhankawdi on Tuesday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 105,
+            "end": 114,
+            "value": "Dhankawdi",
+            "entity": "Location"
+          },
+          {
+            "start": 6,
+            "end": 28,
+            "value": "Deceptive Practice",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The MIDC Bhosari police have booked a man for stalking and outraging the modesty of a 37-year-old woman.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 59,
+            "end": 80,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 9,
+            "end": 16,
+            "value": "Bhosari",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Electronic gadgets and gold worth Rs2.06 lakh were recovered from Pratik Hirachand Lidkar (25) of Dighi after he was arrested on Sunday from Kalewadi. “His involvement in four recent burglaries, including two from Wakad and one each from Hinjewadi and Manchar, has been detected,” said Satish Mane.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 51,
+            "end": 60,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 214,
+            "end": 219,
+            "value": "Wakad",
+            "entity": "Location"
+          },
+          {
+            "start": 238,
+            "end": 247,
+            "value": "Hinjewadi",
+            "entity": "Location2"
+          },
+          {
+            "start": 252,
+            "end": 259,
+            "value": "Manchar",
+            "entity": "Location3"
+          }
+        ]
+      },
+      {
+        "text": "The Sinhagad police on Wednesday booked a Dhayari-based man — who is a tattoo artist and also runs a pharmacy — for repeatedly raping and blackmailing a 35-year-old woman taxi driver over the past one year. The tattoo artist runs a pharmacy at the Dhayari Chowk. He had got acquainted with the woman taxi driver.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 127,
+            "end": 133,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 248,
+            "end": 261,
+            "value": "Dhayari Chowk",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Two boys were booked for breaking the glass window pane of an apartment and stealing a motorcycle worth Rs50,000 from Nigdi on Tuesday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 76,
+            "end": 84,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 118,
+            "end": 123,
+            "value": "Nigdi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Gold ornaments worth Rs2.1 lakh were stolen from an apartment in Kondhwa Budruk on Tuesday night. Varsha Tathele (23), the owner of the apartment, said that the burglars broke the lock to enter her house when she had gone out.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 65,
+            "end": 79,
+            "value": "Kondhwa Budruk",
+            "entity": "Location"
+          },
+          {
+            "start": 37,
+            "end": 43,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Vikash Gadade (19) of Narhe was attacked by two men, who robbed him of Rs5,000 and a cellphone on Thursday morning. The incident happened while the complainant was waiting for an autorickshaw on the Katraj-Dehu Road bypass.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 199,
+            "end": 222,
+            "value": "Katraj-Dehu Road bypass",
+            "entity": "Location"
+          },
+          {
+            "start": 57,
+            "end": 63,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A bag containing 14kg of silver ornaments and cash, collectively worth Rs5.81 lakh, was stolen from a Pune-bound MSRTC bus on Wednesday morning. The incident took place when the bus had halted at a restaurant in Dalaj village, where Rathod got off to have a cup of tea.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 88,
+            "end": 99,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 212,
+            "end": 217,
+            "value": "Dalaj",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Arif Allauddin Tamboli (28) of Wakad was killed after a speeding water tanker ran him over at Bhumkar Chowk around 6.30am on Wednesday. The tanker driver did not stop after he hit Tamboli’s motorcycle.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 94,
+            "end": 108,
+            "value": "Bhumkar Chowk",
+            "entity": "Location"
+          },
+          {
+            "start": 78,
+            "end": 90,
+            "value": "Hit & Run",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two men riding a motorcycle snatched two gold chains worth Rs45,000 from Nitin Adsule, a 40-year-old resident of Bhimpura.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 28,
+            "end": 52,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          },
+          {
+            "start": 113,
+            "end": 121,
+            "value": "Bhimpura",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A Karnataka resident has become the latest victim of the bike-borne robber duo, who snatched her purse containing cash & valuables worth Rs1.2 lakh early on Wednesday morning. The 65-year-old got down from the bus at 5am on Ganeshkhind Road and hired an auto at 5.15am to go to her daughter’s house in Baner, when the robbery happened.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 302,
+            "end": 307,
+            "value": "Baner",
+            "entity": "Location"
+          },
+          {
+            "start": 84,
+            "end": 102,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The police on Thursday arrested a former student of a college in Talegaon Dabhade and her accomplice for blackmailing its principal and extorting Rs 9 lakh from him.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 105,
+            "end": 117,
+            "value": "Others",
+            "entity": "Crime"
+          },
+          {
+            "start": 65,
+            "end": 81,
+            "value": "Talegaon Dabhade",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Pune Rural police arrested a 22-year-old labourer on Friday for the abduction, rape and murder of a one-year-old girl. The girl was abducted on Thursday night near Loni railway station in Loni Kalbhor, when she was sleeping in front of a garment shop with her mother and three sisters.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 192,
+            "end": 204,
+            "value": "Loni Kalbhor",
+            "entity": "Location"
+          },
+          {
+            "start": 92,
+            "end": 98,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Nigdi police on Thursday arrested two men for attacking and robbing two godown workers of their two cellphones, worth Rs9,000, in Jadhavwadi in Chikhali.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 148,
+            "end": 156,
+            "value": "Chikhali",
+            "entity": "Location"
+          },
+          {
+            "start": 50,
+            "end": 71,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two motorcycle-borne men snatched a gold chain worth Rs 40,000 of a 22-year-old woman at Sainagar in Kondhwa on Thursday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 25,
+            "end": 46,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          },
+          {
+            "start": 101,
+            "end": 108,
+            "value": "Kondhwa",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "An autorickshaw driver (25) was booked on Wednesday for threatening and stalking a 20-year-old woman passenger for the past two months.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 56,
+            "end": 80,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A 45-year-old hospital housekeeping staffer was booked for demanding sexual favours from his colleague. The incident occurred in the hospital’s laundry department last month. ",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 69,
+            "end": 83,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Khadki police on Friday claimed to have detected nine chain snatching cases following the arrest of two persons on the records of the Kalyan police in Thane district. Borate told TOI that the duo were taken into custody on June 7 after they had snatched a gold chain on Aundh road in Khadki the same day. ",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 58,
+            "end": 73,
+            "value": "Chain Snatching",
+            "entity": "Crime"
+          },
+          {
+            "start": 4,
+            "end": 10,
+            "value": "Khadki",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The crime branch on Thursday night busted a sex racket running out of a plush housing society at Mohammedwadi in Hadapsar and rescued two women after arresting a 38-year-old man.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 44,
+            "end": 54,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 113,
+            "end": 121,
+            "value": "Hadapsar",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Following an old rivalry, a gang of about 20 men attacked a 19-year-old youth with sharp weapons and beat up his three friends with sticks. The incident occurred at Nana Peth on Thursday evening.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 49,
+            "end": 57,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 165,
+            "end": 174,
+            "value": "Nana Peth",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The crime branch of the Pune police on Friday arrested lawyer Sushil Mancharkar, husband of a sitting PCMC corporator, for allegedly plotting the murder of a 35-year-old woman, who dodged two bullets fired at her last week. On June 9, two men on a motorcycle fired two bullets in the direction of the woman in Pimpri where she had gone to fetch sweets to celebrate the success of her son in SSC exams.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 146,
+            "end": 152,
+            "value": "Murder",
+            "entity": "Crime"
+          },
+          {
+            "start": 310,
+            "end": 316,
+            "value": "Pimpri",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A prominent politician from Junnar was booked on Friday for abusing and threatening a woman officer posted at the Ale Phata police station after she intercepted a pickup van illegally carrying grains meant for a fair price shop.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 114,
+            "end": 123,
+            "value": "Ale Phata",
+            "entity": "Location"
+          },
+          {
+            "start": 60,
+            "end": 83,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Two criminals beat a catering shop employee to death over a trivial argument in Raviwar Peth on Saturday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 80,
+            "end": 92,
+            "value": "Raviwar Peth",
+            "entity": "Location"
+          },
+          {
+            "start": 47,
+            "end": 57,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Warje police on Friday booked a 27-year-old man for abetting the suicide of his wife, Rukhmini Vijay Landge (22), of Warje.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "Warje",
+            "entity": "Location"
+          },
+          {
+            "start": 56,
+            "end": 64,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Seven unidentified men assaulted Suraj Mahadev Bansode (21) of Mangalwar Peth, near Mandai, with sharp weapons on Thursday evening.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 23,
+            "end": 32,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 84,
+            "end": 90,
+            "value": "Mandai",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Unidentified persons attempted to break open an automated teller machine (ATM) of a nationalized bank on Senapati Bapat Road during the night intervening Thursday and Friday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 105,
+            "end": 124,
+            "value": "Senapati Bapat Road",
+            "entity": "Location"
+          },
+          {
+            "start": 34,
+            "end": 44,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Unidentified persons stole a sandalwood tree, worth Rs1,000, from the Paud Road office of Doordarshan early on Thursday morning, the Kothrud police said.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 69,
+            "end": 79,
+            "value": "Paud Road",
+            "entity": "Location"
+          },
+          {
+            "start": 21,
+            "end": 44,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Pune rural police arrested seven men following a mob attack on three on-duty plainclothes policemen who had stopped a tractor driver from fleeing the spot after hitting a motorcycle at Khalumbre village on Talegaon-Chakan Road on Thursday night.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 53,
+            "end": 63,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 210,
+            "end": 230,
+            "value": "Talegaon-Chakan Road",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A teacher at a private school in Talawade was booked on Saturday for abusing and outraging the modesty of the school’s principal on Friday morning.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 81,
+            "end": 102,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 33,
+            "end": 41,
+            "value": "Talawade",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Three men beat up and robbed a 37-year-old bank manager of his cash, cellphone and credit/debit cards totally worth Rs3,500 near Mahatma society in Kothrud in the early hours of Saturday when the man was returning home.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 148,
+            "end": 155,
+            "value": "Kothrud",
+            "entity": "Location"
+          },
+          {
+            "start": 10,
+            "end": 28,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "A bag containing Rs15,000 was stolen from a lawyer’s car parked near the Kamgar statue adjacent to Shivajinagar court premises between 3.15pm and 4.30pm on Thursday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 30,
+            "end": 36,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 99,
+            "end": 111,
+            "value": "Shivajinagar",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A watchman, appointed by a businessman at his bungalow in Nigdi merely six months ago, made off with cash, gold, silver and diamond ornaments and electronic gadgets collectively worth Rs 97.20 lakh.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 58,
+            "end": 63,
+            "value": "Nigdi",
+            "entity": "Location"
+          },
+          {
+            "start": 87,
+            "end": 95,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Three men robbed money and three phones worth Rs10,000 from a 24-yearold man and his friend in the early hours of Saturday near Daund.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 10,
+            "end": 22,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 128,
+            "end": 133,
+            "value": "Daund",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Unidentified people broke into a grocery and made away with cash and dry fruits collectively worth Rs10,000 in the early hours of Saturday at Dhamani village in Ambegaon taluka.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 45,
+            "end": 54,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 161,
+            "end": 169,
+            "value": "Ambegaon",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A 53-year-old man was booked under POCSO on Friday for sexually harassing his minor daughter since the past five years.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 55,
+            "end": 73,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "An armed man robbed a biker of his motorcycle, cash and valuables, collectively worth Rs83,000, after taking lift at Warje on Sunday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 117,
+            "end": 122,
+            "value": "Warje",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "An autorickshaw passenger was beaten to death by the vehicle’s driver and his accomplice following a dispute over Rs20 late on Sunday afternoon at Raviwar Peth.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 147,
+            "end": 159,
+            "value": "Raviwar Peth",
+            "entity": "Location"
+          },
+          {
+            "start": 30,
+            "end": 45,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Nigdi police have arrested a watchman and two of his accomplices who were on the run after stealing Rs97 lakh from a businessman’s bungalow on Saturday night. Six months ago, Vinod Agarwal, a 48-year-old businessman, had appointed Vinod Pariyar, a Nepal native, as the watchman of his bungalow in Nigdi.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 95,
+            "end": 103,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "value": "Nigdi",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A 32-year-old man, Chetan Gudawat, was arrested on June 15 for stealing expensive motorcycles, dismantling them and selling their parts from January this year. Four vehicles stolen from Hadapsar, one each from Kondhwa, Mundhwa, Vishrambaugh and one stolen from Thane in 2013 were recovered.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 165,
+            "end": 180,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 210,
+            "end": 217,
+            "value": "Kondhwa",
+            "entity": "Location"
+          },
+          {
+            "start": 219,
+            "end": 226,
+            "value": "Mundhwa",
+            "entity": "Location2"
+          },
+          {
+            "start": 228,
+            "end": 240,
+            "value": "Vishrambaugh",
+            "entity": "Location3"
+          }
+        ]
+      },
+      {
+        "text": "A duo riding a motorcycle snatched a purse containing cash, gold ornaments and two cellphones collectively worth Rs1.06 lakh from a woman riding in an autorickshaw early on Sunday morning. The incident occurred on the Pune-Nashik highway in Bhosari.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 241,
+            "end": 248,
+            "value": "Bhosari",
+            "entity": "Location"
+          },
+          {
+            "start": 26,
+            "end": 42,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The defence authorities on Monday lodged a police complaint against two persons for illegally slaughtering animals in a hut on Dehu Road.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 127,
+            "end": 136,
+            "value": "Dehu Road",
+            "entity": "Location"
+          },
+          {
+            "start": 84,
+            "end": 106,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Thieves broke into a flat in Wakad and made off with Rs 7,500 and gold ornaments worth Rs 4.85 lakh. The burglary happened in the early hours of Sunday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 39,
+            "end": 47,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 29,
+            "end": 34,
+            "value": "Wakad",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "The Bibvewadi police on Sunday detained a minor boy, who was on the run after snatching a bag containing Rs 15,000 from a girl riding pillion on a scooter with her mother.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 4,
+            "end": 13,
+            "value": "Bibvewadi",
+            "entity": "Location"
+          },
+          {
+            "start": 77,
+            "end": 93,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Five men, who assaulted a 34-year-old man and ransacked his house in the Thergaon area on Sunday afternoon, were booked by the police under charges of rioting under IPC.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 14,
+            "end": 23,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 73,
+            "end": 81,
+            "value": "Thergaon",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A member of Chhota Rajan gang was arrested from Delhi on Tuesday for allegedly masterminding the murder of land developer Deven Shah (53) on January 13 at his residence off Prabhat road.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 173,
+            "end": 185,
+            "value": "Prabhat road",
+            "entity": "Location"
+          },
+          {
+            "start": 69,
+            "end": 103,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "An autorickshaw driver (25) was booked on Wednesday for threatening and stalking a 20-year-old woman passenger for the past two months. An officer of the Wakad police said",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 154,
+            "end": 159,
+            "value": "Wakad",
+            "entity": "Location"
+          },
+          {
+            "start": 56,
+            "end": 80,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "An employee working in the finance department of a software company was arrested on Monday for stalking his former colleague and threatening to kill her parents. A complaint was filed by a 24-year-old finance analyst working with a private company, following which Wakad Police arrested the suspect under sections 354-D (stalking), 342 (wrongful confinement) and 506 (criminal intimidation) of the Indian Penal Code.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 265,
+            "end": 270,
+            "value": "Wakad",
+            "entity": "Location"
+          },
+          {
+            "start": 94,
+            "end": 103,
+            "value": "Others",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Shivajinagar police on Monday registered an offence against a man for outraging the modesty of a 40-year-old woman near Shivajinagar court.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 74,
+            "end": 96,
+            "value": "Sexual Offence",
+            "entity": "Crime"
+          },
+          {
+            "start": 4,
+            "end": 16,
+            "value": "Shivajinagar",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Ashraf Memon (24) and Arif Memon (47) were arrested for assaulting and injuring Tarikh Khan (25) with sharp weapons over old rivalry. Javed Khan, the victim’s brother, has lodged a complaint with the Bund Garden police.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 200,
+            "end": 211,
+            "value": "Bund Garden",
+            "entity": "Location"
+          },
+          {
+            "start": 56,
+            "end": 79,
+            "value": "Assault",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Unidentified men broke into a flat at Sai-Park building in Katraj and made off with cash, gold and silver ornaments collectively worth Rs3.24 lakh.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 70,
+            "end": 78,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 59,
+            "end": 65,
+            "value": "Katraj",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Burglars broke the window pane of a house in Camp between 1pm and 6.30pm on Monday and stole valuables and cash totally worth Rs4 lakh. Jaswindersingh Sethi (52), the owner of the house, said that the suspects made away with Rs1 lakh and gold ornaments.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 210,
+            "end": 219,
+            "value": "Theft",
+            "entity": "Crime"
+          },
+          {
+            "start": 45,
+            "end": 49,
+            "value": "Camp",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "A jammer fixed to a vehicle parked in a no-parking zone near Chittaranjan Vatika Garden was stolen by the motorcycle’s owner on Monday.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 61,
+            "end": 87,
+            "value": "Chittaranjan Vatika Garden",
+            "entity": "Location"
+          },
+          {
+            "start": 92,
+            "end": 98,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "Labourers working at a construction site found the decapitated body of an unidentified man in a ditch behind a hotel in Kondhwa Budruk on Tuesday evening.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 120,
+            "end": 134,
+            "value": "Kondhwa Budruk",
+            "entity": "Location"
+          },
+          {
+            "start": 41,
+            "end": 67,
+            "value": "Murder",
+            "entity": "Crime"
+          }
+        ]
+      },
+      {
+        "text": "The Shivajinagar police arrested a 26-year-old man from Ghorpade Peth for dousing his wife in petrol and attempting to set her ablaze right in front of the family court in Shivajinagar on Tuesday afternoon.",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 105,
+            "end": 133,
+            "value": "Assault",
+            "entity": "Crime"
+          },
+          {
+            "start": 172,
+            "end": 184,
+            "value": "Shivajinagar",
+            "entity": "Location"
+          }
+        ]
+      },
+      {
+        "text": "Three men assaulted a 25-year-old man with iron rods before robbing him of his debit card, cellphone worth Rs2000 and even his sports shoes. The robbery took place on the service road of the Katraj-Dehu Road bypass near Chhatrapati Shivaji Stadium in Balewadi",
+        "intent": "Extract entity",
+        "entities": [
+          {
+            "start": 191,
+            "end": 214,
+            "value": "Katraj-Dehu Road bypass",
+            "entity": "Location"
+          },
+          {
+            "start": 60,
+            "end": 71,
+            "value": "Theft",
+            "entity": "Crime"
+          }
+        ]
+      }
+    ]
+  }
+}
