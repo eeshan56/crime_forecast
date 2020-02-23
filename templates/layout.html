@@ -11,6 +11,9 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
 	{% if title %}
 	<title>Crime Forecast - {{ title }}</title>
 	{% else %}
@@ -35,6 +38,7 @@
           				{% if 'admin' in session %}
           					<a class="nav-item nav-link" href="{{ url_for('ad_ner') }}">NER</a>
           				{% endif %}
+          				<a class="nav-item nav-link" href="{{ url_for('map') }}">Map</a>
           				<a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
         			</div>
         <!-- Navbar Right Side -->

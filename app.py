@@ -117,15 +117,27 @@ def logout():
 		#logged_in = False
 	return redirect(url_for('home'))
 
-@app.route("/map")
+@app.route("/map", methods = ['GET', 'POST'])
 def map():
-
+	ll = []
 	if 'username' in session and 'email' in session:
-		print("In map")
+		client = MongoClient("mongodb+srv://test:test123%23@cluster0-l5ord.mongodb.net/test?retryWrites=true&w=majority")
+		db = client.get_database('admin_db')
+		collection = db.loc_collection
+		cursor = collection.find({})
+		data = ''
+
+		for document in cursor:
+		#   print(document)
+			ll.append(document)
+			data += '[' + str(document['Location']['lat']) + ',' + str(document['Location']['long']) + '],'
+
+		data = data[:-1]
+		#print(data)
 	else:
 		return redirect(url_for('login'))
 
-	return render_template('map.html', title = 'Map')
+	return render_template('map.html', title = 'Map', data = ll)
 
 @app.route("/reset_password", defaults = {'email' : ''}, methods = ['GET', 'POST'])
 @app.route("/reset_password/<email>", methods = ['GET', 'POST'])
