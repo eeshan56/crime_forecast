@@ -241,7 +241,7 @@ python-socketio==3.1.2
 python-telegram-bot==11.1.0
 pytz==2018.9
 PyWavelets==1.0.1
-PyYAML==5.3
+PyYAML==5.4
 pyzmq==18.1.1
 QtAwesome==0.5.3
 qtconsole==4.4.3
